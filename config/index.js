@@ -10,7 +10,7 @@ module.exports = {
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
   seoTitleSuffix: "Portfolio Minimal", // SEO title syntax will be e.g. " - Imprint{seoTitleSuffix}"
   useCookieBar: true, // If you use Google Analytics and want to be GDPR-compliant, set it to true
-  googleAnalyticsTrackingId: "UA-197563814-1", // e.g. UA-XXXXXX-X
+  // googleAnalyticsTrackingId: "UA-197563814-1", // e.g. UA-XXXXXX-X
 
   // -- THEME SETTINGS -----
   colors: {
