@@ -3,8 +3,7 @@ module.exports = {
   author: "@christopherarotunno",
   siteTitle: "caRot",
   siteShortTitle: "caRot", // Used as logo text in header, footer, and splash screen
-  siteDescription:
-    "A digital profile and blog for Christopher A. Rotunno",
+  siteDescription: "A digital profile and blog for Christopher A. Rotunno",
   siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
   siteLanguage: "en_US",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
