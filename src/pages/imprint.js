@@ -39,68 +39,68 @@ const StyledContentWrapper = styled(ContentWrapper)`
   }
 `
 
-// const Imprint = ({ data }) => {
-//   const { body, frontmatter } = data.imprint.edges[0].node
-//   const { title, seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
+const Imprint = ({ data }) => {
+  const { body, frontmatter } = data.imprint.edges[0].node
+  const { title, seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
 
-//   const globalState = {
-//     isIntroDone: useSplashScreen ? false : true,
-//     darkMode: false,
-//   }
+  const globalState = {
+    isIntroDone: useSplashScreen ? false : true,
+    darkMode: false,
+  }
 
-//   return (
-//     <GlobalStateProvider initialState={globalState}>
-//       <Layout>
-//         <SEO
-//           title={
-//             useSeoTitleSuffix
-//               ? `${seoTitle} - ${seoTitleSuffix}`
-//               : `${seoTitle}`
-//           }
-//           meta={[{ name: "robots", content: "noindex" }]}
-//         />
-//         <StyledSection id={title}>
-//           <StyledContentWrapper>
-//             <h1 data-testid="heading">{title}</h1>
-//             <MDXRenderer>{body}</MDXRenderer>
-//           </StyledContentWrapper>
-//         </StyledSection>
-//       </Layout>
-//     </GlobalStateProvider>
-//   )
-// }
+  return (
+    <GlobalStateProvider initialState={globalState}>
+      <Layout>
+        <SEO
+          title={
+            useSeoTitleSuffix
+              ? `${seoTitle} - ${seoTitleSuffix}`
+              : `${seoTitle}`
+          }
+          meta={[{ name: "robots", content: "noindex" }]}
+        />
+        <StyledSection id={title}>
+          <StyledContentWrapper>
+            <h1 data-testid="heading">{title}</h1>
+            <MDXRenderer>{body}</MDXRenderer>
+          </StyledContentWrapper>
+        </StyledSection>
+      </Layout>
+    </GlobalStateProvider>
+  )
+}
 
-// Imprint.propTypes = {
-//   data: PropTypes.shape({
-//     imprint: PropTypes.shape({
-//       edges: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           node: PropTypes.shape({
-//             body: PropTypes.string.isRequired,
-//             frontmatter: PropTypes.object.isRequired,
-//           }).isRequired,
-//         }).isRequired
-//       ).isRequired,
-//     }).isRequired,
-//   }).isRequired,
-// }
+Imprint.propTypes = {
+  data: PropTypes.shape({
+    imprint: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            body: PropTypes.string.isRequired,
+            frontmatter: PropTypes.object.isRequired,
+          }).isRequired,
+        }).isRequired
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
-// export default Imprint
+export default Imprint
 
-// export const pageQuery = graphql`
-//   {
-//     imprint: allMdx(filter: { fileAbsolutePath: { regex: "/imprint/" } }) {
-//       edges {
-//         node {
-//           body
-//           frontmatter {
-//             title
-//             seoTitle
-//             useSeoTitleSuffix
-//             useSplashScreen
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  {
+    imprint: allMdx(filter: { fileAbsolutePath: { regex: "/imprint/" } }) {
+      edges {
+        node {
+          body
+          frontmatter {
+            title
+            seoTitle
+            useSeoTitleSuffix
+            useSplashScreen
+          }
+        }
+      }
+    }
+  }
+`

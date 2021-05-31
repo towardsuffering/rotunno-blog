@@ -23,9 +23,9 @@ describe("IndexPage", () => {
 
   it("references legal pages", () => {
     cy.findByTestId("footer-links")
-      // .findByText(/imprint/i)
+      .findByText(/imprint/i)
       .should("have.attr", "href")
-      // .and("include", "imprint")
+      .and("include", "imprint")
     cy.findByTestId("footer-links")
       .findByText(/privacy/i)
       .should("have.attr", "href")
@@ -37,12 +37,12 @@ describe("IndexPage", () => {
       if (elem.attr("data-useCookieBar") === "true") {
         cy.get("button#confirm").click()
         cy.findByTestId("footer-links")
-          // .findByText(/imprint/i)
+          .findByText(/imprint/i)
           .click()
         cy.findByTestId("heading").should("exist")
       } else {
         cy.findByTestId("footer-links")
-          // .findByText(/imprint/i)
+          .findByText(/imprint/i)
           .click()
         cy.findByTestId("heading").should("exist")
       }
