@@ -1,16 +1,16 @@
 module.exports = {
   //-- SITE SETTINGS -----
   author: "@christopherarotunno",
-  siteTitle: "A digital profile and blog for Christopher A. Rotunno",
+  siteTitle: "caRot",
   siteShortTitle: "caRot", // Used as logo text in header, footer, and splash screen
   siteDescription:
-    "A modern one-page portfolio with a clean yet expressive design.",
+    "A digital profile and blog for Christopher A. Rotunno",
   siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
   siteLanguage: "en_US",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
   seoTitleSuffix: "Portfolio Minimal", // SEO title syntax will be e.g. " - Imprint{seoTitleSuffix}"
-  useCookieBar: false, // If you use Google Analytics and want to be GDPR-compliant, set it to true
-  // googleAnalyticsTrackingId: "UA-197563814-1", // e.g. UA-XXXXXX-X
+  useCookieBar: true, // If you use Google Analytics and want to be GDPR-compliant, set it to true
+  googleAnalyticsTrackingId: "UA-197563814-1", // e.g. UA-XXXXXX-X
 
   // -- THEME SETTINGS -----
   colors: {
