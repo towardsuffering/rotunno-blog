@@ -39,8 +39,8 @@ const StyledContentWrapper = styled(ContentWrapper)`
   }
 `
 
-const Imprint = ({ data }) => {
-  const { body, frontmatter } = data.imprint.edges[0].node
+const Copyright = ({ data }) => {
+  const { body, frontmatter } = data.copyright.edges[0].node
   const { title, seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
 
   const globalState = {
@@ -70,9 +70,9 @@ const Imprint = ({ data }) => {
   )
 }
 
-Imprint.propTypes = {
+Copyright.propTypes = {
   data: PropTypes.shape({
-    imprint: PropTypes.shape({
+    copyright: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
@@ -85,11 +85,11 @@ Imprint.propTypes = {
   }).isRequired,
 }
 
-export default Imprint
+export default Copyright
 
 export const pageQuery = graphql`
   {
-    imprint: allMdx(filter: { fileAbsolutePath: { regex: "/imprint/" } }) {
+    copyright: allMdx(filter: { fileAbsolutePath: { regex: "/copyright/" } }) {
       edges {
         node {
           body
