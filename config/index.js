@@ -110,8 +110,8 @@ module.exports = {
       url: "/privacy",
     },
     {
-      name: "Imprint",
-      url: "/imprint",
+      name: "Terms",
+      url: "/terms",
     },
   ],
 }
