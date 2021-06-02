@@ -85,6 +85,7 @@ Terms.propTypes = {
   }).isRequired,
 }
 
+
 export default Terms
 
 export const pageQuery = graphql`
